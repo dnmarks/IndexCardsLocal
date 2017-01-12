@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+    <head>
+        <title>Index Cards</title>
+        <link rel="stylesheet" type="text/css" href="IC.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">      
+        <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+
+    </head>
+    <body>
+        <div>
+            <div id="title">ADD AN INDEX CARD</div><br>
+                <form id="card" action="IC_add.php" method="post" target="_top">
+                    <textarea id="word" name="word" placeholder="Word" maxlength="100"></textarea> 
+                    <textarea id="def" name="definition" placeholder="Definition" maxlength="500"></textarea><br>
+                    
+                    <input type="submit" id="finish" name="finish" class="btn btn-default btn-lg btn-block" value="FINISH" />
+            	</form>
+				<button id="addDef" class="btn btn-default btn-lg btn-block">DEFINE</button>
+				<button id="back2term" class="btn btn-default btn-lg btn-block">BACK</button>
+				<button id="addNew" class="btn btn-default btn-lg btn-block">NEW CARD</button>
+				<button id="showCards" class="btn btn-default btn-lg btn-block">SHOW CARDS</button>
+				<button id="hideCards" class="btn btn-default btn-lg btn-block">HIDE CARDS</button>
+        </div>    
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>  
+        <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>         
+        <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.13/jquery.popupoverlay.js"></script>
+
+        <script src = "IC.js"></script> 
+
+    </body>
