@@ -1,29 +1,20 @@
+body{
+    background-color: #5e6077;
+    text-align: center;
+    position: relative;
+    background-size: 100%
+}
+
 #title{
     font-size: 50px;
     font-family: 'Caveat', cursive;
     display: block;
     margin: auto;
-    margin-top: 70px;
-    width: 50%;
+    margin-top: 30px;
+    width: 100%;
     text-align: center;
     color: white;
 }
-
-#card{
-    display: block;
-    margin: auto;
-}
-
-/*html, body{*/
-/*    min-height: 100%*/
-/*}*/
-
-body{
-    background: linear-gradient(to bottom right, #384047, #384047);
-    text-align: center;
-    position: relative;
-}
-
 
 #word {
     border: solid gray 2px;
@@ -51,34 +42,24 @@ body{
     margin: auto;
 }
 
-
-#addDef, #back2term, #addNew, #finish, #showCards, #hideCards, #edit_form{
-    display: none;
-    margin: 15px auto auto auto;
-    width: 25%;
-    text-align: center;
-
-}
-
 .addedWord{
     height: 125px;
     width: 200px;
     margin: 15px;
-	display: inline-block;
-	text-align: center;
+    text-align: center;
+    z-index: 3
 }
 
 
 
 .front{
-	position: relative;
+    position: relative;
     border: solid gray 2px;
     height: 125px;
     width: 200px;
     font-size: 30px;
     font-family: 'Caveat', cursive;
     background-color: white;
-	z-index: 3;
 }
 
 .back{
@@ -92,109 +73,65 @@ body{
     background-image: url("http://static1.squarespace.com/static/52c5b338e4b03b17dfaf44e4/52c6464ce4b0772523fc0011/53b48aa4e4b04bc8305a0b7f/1467001083060/index_card.png?format=1000w");
     background-size: 110%;
     color: black;
-	z-index: 3;
+}
+.modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    padding: 100px 300px; /* Location of the box */
+    left: 0;
+    top: 0;
+    z-index: 5;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    /* overflow: auto; Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+
+.modal_div{
+    display: inline-block;
+}
+
+#card_div{
+    margin-top: 82px;
 }
 
 
-.deletedCard{
-    display: none;
-    }
+.fixed{
+    position: fixed;
+}
+.selected{
+    padding-top: 10px;
+    font-size: 24px;
+    line-height: 26px;
+    bottom: 100px;
+    font-family: 'Caveat', cursive;
+    margin-top: 100px;
+}
 
 .delBtn {
      position: relative;
      left: 110px;
-	bottom: 5px;
-	color: red;
-	 height: 20px;
-	 width: 20px;
-	z-index: 3;
+    bottom: 5px;
+    color: red;
+     height: 20px;
+     width: 20px;
+    z-index: 3;
 }
 
 .edit{
-	position: relative;
+    position: relative;
     left: 65px;
     bottom: 5px;
-	color: yellow;
-	height: 20px;
-	width: 20px;
-	z-index: 3;
+    color: yellow;
+    height: 20px;
+    width: 20px;
+    z-index: 3;
 }
 
 .addedWord .btn{
-	background-color: transparent;
-	padding: 0px;
+    background-color: transparent;
+    padding: 0px;
 }
-
-.glyphicon{
-	position: absolute;
-	right: 5px;
-}
-
-.selected{
-    position: relative;
-    z-index: 4;
-    border: solid black 3px;
-    padding-top: 10px;
-    font-size: 23px;
-    line-height: 26px;
-    bottom: 100px;
-    font-family: 'Caveat', cursive;
-    background-image: url("http://static1.squarespace.com/static/52c5b338e4b03b17dfaf44e4/52c6464ce4b0772523fc0011/53b48aa4e4b04bc8305a0b7f/1467001083060/index_card.png?format=1000w");
-    background-size: 110%;
-    color: black;
-}
-
-.icons{
-   bottom: 100px;
-   left: 290px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

@@ -1,4 +1,4 @@
-<?php include 'IC_connect.php';?>
+<?php include 'IC_connect_Local.php';?>
 <style>
 	<?php include 'IC.css';?>
 </style>
@@ -14,16 +14,19 @@ foreach ($row as $index => $values){
 	$card_def = $values[2];
 	
 	//the id to addedWord is the ID in the table. each print is the whole row of ID, word, & definition. this is so that when editing a word or def, it can reference the ID in mysql to make the changes
-	print "<div class='addedWord' id='" . $card_id . "'> 
+	print "<div class='modal_div'>
+			<div class='addedWord' id='" . $card_id . "'> 
 			<button class='btn delBtn'>
 			<span class='glyphicon glyphicon-trash' aria-hidden='true'>
-			</span></button>
+			</span>
+			</button>
 			<button class='btn edit'>
 			<span class='glyphicon glyphicon-pencil' aria-hidden='true'>
-			</span></button>
+			</span>
+			</button>
 			<div class= 'front'>
 			" . $card_word . "</div>
-			<div class= 'back'>" . $card_def . "</div></div>";
-}
+			<div class= 'back'>" . $card_def . "</div></div></div>";
+	}
 
 ?>

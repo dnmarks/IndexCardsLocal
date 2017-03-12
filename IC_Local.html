@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+    <head>
+        <title>Index Cards</title>
+         <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- BOOTSTRAP CSS -->
+        <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+        <!-- Latest compiled JavaScript 
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+ 
+        <meta name="viewport" content="width=device-width, initial-scale=.7, maximum-scale=1, user-scalable=no">      
+        <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+        <!--My CSS stylesheet-->
+        <link rel="stylesheet" type="text/css" href="IC_Local.css"> 
+    </head>
+    <body>
+	<div class="container">
+            <div class="row">
+                    <div class="col-md-12 IC_col"> <!--start of index cards column -->
+
+                        <div class="row"> <!--start of title row -->
+                            <header id="title" class="col-sm-12 col-md-12 col-lg-12">INDEX CARDS</header><!-- end of header column -->
+                        </div> <!-- end of title row -->          
+                        <div id="button_chunk" class="row"> <!-- start of button row -->
+                            <button id="addDef" class="btn btn-default">DEFINE</button>
+                            <button id="back2term" class="btn btn-default">BACK</button>
+                            <button id="finish" class="btn btn-default"  type="submit" name="finish" value="FINISH">FINISH</button>
+                            <button id="cancel" class="btn btn-default">CANCEL</button>
+                            <button id="showCards" class="btn btn-default">SHOW CARDS</button>
+                            <button id="hideCards" class="btn btn-default">HIDE CARDS</button>
+                        </div> <br><!-- end of button chunk row -->
+                        <div class="row">          
+                             <form id="card" action="IC_add.php" method="post" target="_top">
+                                 <textarea id="word" name="word" placeholder="Word" maxlength="100"></textarea> 
+                                    <textarea id="def" name="definition" placeholder="Definition" maxlength="500"></textarea><br>
+                           </form>
+                       </div> <!-- end of row that contains the form -->
+                    </div><!--end of index cards column -->
+                    
+                    <div class="col-md-6  col-md-offset-6"> <!--start of shown cards columm -->
+                        <div class="row"> <!-- start of shown cards row -->
+                            <div id="card_div" style="display: none"></div> <!-- end of cards column-->  
+                        </div> <!-- end of shown cards row -->
+                    </div> <!--end of shown cards columm -->
+
+            </div>  <!-- end of main row -->
+	        
+        </div><!-- end of container -->
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>  
+        <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>    
+            
+        <script src = "IC_Local.js"></script> 
+
+    </body>

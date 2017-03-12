@@ -1,4 +1,4 @@
-<?php include 'IC_connect.php';?>
+<?php include 'IC_connect_Local.php';?>
 <style>
 	<?php include 'IC.css';?>
 </style>
