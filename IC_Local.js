@@ -67,8 +67,8 @@ var showCards = function showCards(){
 
 			$("#card_div").append(cards);
 			$("#card_div").slideDown("slow");
-
-			$(".IC_col").removeClass("col-md-12").addClass("col-md-6, fixed");
+			$("#showCards").attr("disabled", "disabled");
+			$(".IC_col").removeClass("col-md-12").addClass("col-md-6");
 
 		$(".addedWord").flip(function(){ //changed this from .addedWord
 			$(this).on("flip:done", function(){ //changed this from .addedWord
@@ -147,16 +147,15 @@ var showCards = function showCards(){
 	} //show cards success function
 }); //show cards ajax 
 	
-}; // show cards function
+}; // end of show cards function
 
 var hideCards = function hideCards(){
 		$("#card_div").slideUp("fast");
 		$(".addedWord").fadeOut();
 		window.setTimeout( function (){
-			$(".IC_col").removeClass("col-md-6, fixed").addClass("col-md-12");
+			$(".IC_col").removeClass("col-md-6").addClass("col-md-12");
 			}, 600);
-		//$(" #hideCards").addClass("disabled");
-		//$("#showCards").removeClass("disabled");
+		$("#showCards").removeAttr("disabled");
 }
 
 $("#showCards").click(showCards); // show cards on click
